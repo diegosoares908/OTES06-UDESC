@@ -1,9 +1,10 @@
-package semestre1.nathan.filipe.hoepers.otes06.com.example.udesc.myapplication;
+package semestre1.nathan.filipe.hoepers.otes06.com.example.udesc.crud;
 
-import android.util.Log;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.json.JSONArray;
-import org.json.JSONObject;
+import org.json.JSONException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +12,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 
 public class MoviesService {
@@ -41,7 +41,6 @@ public class MoviesService {
             String inputLine;
 
             while ((inputLine = in.readLine()) != null) {
-                //Armazena os filmes na variável content
                 content.append(inputLine);
             }
             in.close();
@@ -52,39 +51,15 @@ public class MoviesService {
             e.printStackTrace();
         }
 
-        List<Movie> movies = new ArrayList<>();
+        List<Movie> movies = null;
         try {
             JSONArray array = new JSONArray(content.toString());
-
-
-            for (int i = 0; i < array.length(); i++) {
-                JSONObject object = array.getJSONObject(i);
-//                Movie movie = new Movie();
-//
-//                movie.setId(object.getLong("id"));
-//                movie.setCost(object.getLong("cost"));
-//                movie.setTitle(object.getString("title"));
-//                movie.setDuration(object.getInt("duration"));
-//                movie.setYear(object.getInt("year"));
-//                movie.setDirector_id(object.getInt("director_id"));
-//                movie.setCurrency(object.getString("currency"));
-
-                Log.d("TESTE", object.toString());
-            }
-        } catch (Throwable t) {
-            t.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
-
-        //try {
-            //movies = mapper.readValue(content.toString(), new TypeReference<List<Movie>>(){});
-        //} catch (IOException e) {
-          //  e.printStackTrace();
-        //}
 
 
         return movies;
 
     }
-
-
 }
