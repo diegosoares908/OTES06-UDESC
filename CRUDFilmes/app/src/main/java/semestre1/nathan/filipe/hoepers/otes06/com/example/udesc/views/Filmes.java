@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
-
+import semestre1.nathan.filipe.hoepers.otes06.com.example.udesc.crud.*;
 import java.util.List;
 
 public class Filmes extends AppCompatActivity implements OnMovieClickListener<Movie> {
@@ -16,7 +16,7 @@ public class Filmes extends AppCompatActivity implements OnMovieClickListener<Mo
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_filmes2);
 
         LoadAllMovies loadAllMovies = new LoadAllMovies(this);
         loadAllMovies.execute();

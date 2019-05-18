@@ -1,8 +1,5 @@
 package semestre1.nathan.filipe.hoepers.otes06.com.example.udesc.crud;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 

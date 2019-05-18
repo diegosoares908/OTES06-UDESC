@@ -13,7 +13,7 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.Movi
     List<Movie> movies;
     OnMovieClickListener onMovieClickListener;
 
-    MovieListAdapter(List<Movie> movies, OnMovieClickListener onMovieClickListener) {
+    public MovieListAdapter(List<Movie> movies, OnMovieClickListener onMovieClickListener) {
         this.movies = movies;
         this.onMovieClickListener = onMovieClickListener;
     }
