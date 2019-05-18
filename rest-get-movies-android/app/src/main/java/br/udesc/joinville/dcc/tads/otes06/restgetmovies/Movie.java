@@ -1,4 +1,4 @@
-package semestre1.nathan.filipe.hoepers.otes06.com.example.udesc.crud;
+package br.udesc.joinville.dcc.tads.otes06.restgetmovies;
 
 public class Movie {
     String id;
@@ -77,16 +77,4 @@ public class Movie {
     }
 
 
-    @Override
-    public String toString() {
-        return "Movie{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", duration=" + duration +
-                ", cost=" + cost +
-                ", year=" + year +
-                ", director_id=" + director_id +
-                ", currency='" + currency + '\'' +
-                '}';
-    }
 }

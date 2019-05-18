@@ -1,4 +1,4 @@
-package semestre1.nathan.filipe.hoepers.otes06.com.example.udesc.crud;
+package br.udesc.joinville.dcc.tads.otes06.restgetmovies;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,7 +13,7 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.Movi
     List<Movie> movies;
     OnMovieClickListener onMovieClickListener;
 
-    public MovieListAdapter(List<Movie> movies, OnMovieClickListener onMovieClickListener) {
+    MovieListAdapter(List<Movie> movies, OnMovieClickListener onMovieClickListener) {
         this.movies = movies;
         this.onMovieClickListener = onMovieClickListener;
     }
@@ -42,8 +42,6 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.Movi
 
     @Override
     public int getItemCount() {
-
-
         return this.movies.size();
     }
 

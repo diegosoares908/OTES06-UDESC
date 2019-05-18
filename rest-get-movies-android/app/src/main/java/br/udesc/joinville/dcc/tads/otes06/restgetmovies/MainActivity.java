@@ -1,4 +1,4 @@
-package semestre1.nathan.filipe.hoepers.otes06.com.example.udesc.views;
+package br.udesc.joinville.dcc.tads.otes06.restgetmovies;
 
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -6,17 +6,17 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
-import semestre1.nathan.filipe.hoepers.otes06.com.example.udesc.crud.*;
+
 import java.util.List;
 
-public class Filmes extends AppCompatActivity implements OnMovieClickListener<Movie> {
+public class MainActivity extends AppCompatActivity implements OnMovieClickListener<Movie> {
 
     private RecyclerView list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_filmes2);
+        setContentView(R.layout.activity_main);
 
         LoadAllMovies loadAllMovies = new LoadAllMovies(this);
         loadAllMovies.execute();

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="semestre1.nathan.filipe.hoepers.otes06.com.example.udesc.crud">
+    package="br.udesc.joinville.dcc.tads.otes06.restgetmovies">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -19,12 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="semestre1.nathan.filipe.hoepers.otes06.com.example.udesc.crud.Filmes"
-            android:label="@string/title_activity_filmes" />
-        <activity
-            android:name="semestre1.nathan.filipe.hoepers.otes06.com.example.udesc.crud.Directors"
-            android:label="@string/title_activity_directors"></activity>
     </application>
 
 </manifest>

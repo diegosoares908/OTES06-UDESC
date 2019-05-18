@@ -1,9 +1,7 @@
-package semestre1.nathan.filipe.hoepers.otes06.com.example.udesc.views;
+package semestre1.nathan.filipe.hoepers.otes06.com.example.udesc.crud;
 
-import android.os.Bundle;
 import android.app.Activity;
-
-import semestre1.nathan.filipe.hoepers.otes06.com.example.udesc.crud.R;
+import android.os.Bundle;
 
 
 public class Directors extends Activity {

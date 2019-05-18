@@ -1,8 +1,7 @@
-package semestre1.nathan.filipe.hoepers.otes06.com.example.udesc.crud;
+package br.udesc.joinville.dcc.tads.otes06.restgetmovies;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,10 +9,9 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 
-public class MoviesService {
+public class MoviesService{
 
     private String baseUrl;
     private String repositoryName;
@@ -30,7 +28,7 @@ public class MoviesService {
     public List<Movie> getAll(){
 
         StringBuffer content = new StringBuffer();
-
+        ObjectMapper mapper = new ObjectMapper();
         try {
             this.url = new URL(this.fullUrl);
             this.connection = (HttpURLConnection) this.url.openConnection();
@@ -50,25 +48,10 @@ public class MoviesService {
             e.printStackTrace();
         }
 
-        List<Movie> movies = new ArrayList<>();
+        List<Movie> movies = null;
         try {
-            JSONArray array = new JSONArray(content.toString());
-
-            for (int i = 0; i < array.length(); i++) {
-                JSONObject object = array.getJSONObject(i);
-                Movie movie = new Movie();
-
-                movie.setId(object.getString("id"));
-                //movie.setCost(object.getDouble("cost"));
-                movie.setTitle(object.getString("title"));
-                //movie.setDuration(object.getInt("duration"));
-                movie.setYear(object.getInt("year"));
-                //movie.setDirector_id(object.getInt("director_id"));
-                //movie.setCurrency(object.getString("currency"));
-
-                movies.add(movie);
-            }
-        } catch (JSONException e) {
+            movies = mapper.readValue(content.toString(), new TypeReference<List<Movie>>(){});
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
