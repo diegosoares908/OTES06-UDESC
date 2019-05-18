@@ -1,5 +1,6 @@
 package semestre1.nathan.filipe.hoepers.otes06.com.example.udesc.crud;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -16,7 +17,7 @@ public class Filmes extends AppCompatActivity implements OnMovieClickListener<Mo
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_filmes2);
+        setContentView(R.layout.activity_filmes);
 
         LoadAllMovies loadAllMovies = new LoadAllMovies(this);
         loadAllMovies.execute();
@@ -24,7 +25,11 @@ public class Filmes extends AppCompatActivity implements OnMovieClickListener<Mo
 
     @Override
     public void onMovieClick(Movie movie) {
-        Toast.makeText(this,movie.getTitle(),Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,movie.getId(),Toast.LENGTH_SHORT).show();
+
+        Intent i = new Intent(Filmes.this, FilmeInfo.class);
+        i.putExtra("idfilme", movie.getId());
+        startActivity(i);
     }
 
 
