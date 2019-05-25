@@ -3,9 +3,12 @@ package semestre1.nathan.filipe.hoepers.otes06.com.example.udesc.crud;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.List;
@@ -21,6 +24,15 @@ public class Filmes extends AppCompatActivity implements OnMovieClickListener<Mo
 
         LoadAllMovies loadAllMovies = new LoadAllMovies(this);
         loadAllMovies.execute();
+
+        FloatingActionButton adicionar = findViewById(R.id.addFab);//filmes
+        adicionar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Filmes.this, AddMovieActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     @Override
@@ -32,6 +44,12 @@ public class Filmes extends AppCompatActivity implements OnMovieClickListener<Mo
         startActivity(i);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        LoadAllMovies loadAllMovies = new LoadAllMovies(this);
+        loadAllMovies.execute();
+    }
 
     class LoadAllMovies extends AsyncTask<Void, Void, List<Movie>>{
 

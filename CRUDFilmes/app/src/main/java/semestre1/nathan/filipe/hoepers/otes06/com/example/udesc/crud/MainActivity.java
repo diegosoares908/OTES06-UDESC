@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button filmes = (Button) findViewById(R.id.button3);//filmes
 
+
         filmes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+
+
+
     }
 
 

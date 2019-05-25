@@ -10,58 +10,118 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="152dp"
+        android:layout_marginStart="148dp"
         android:text="Deletar"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="6dp"
-        android:layout_marginTop="372dp"
-        android:text="Adicionar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="368dp"
-        android:layout_height="356dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="204dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/titulo"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="46dp"
-            android:text="Título:" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/duracao"
-            android:layout_width="match_parent"
-            android:layout_height="49dp"
-            android:text="Duração:" />
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title:  " />
 
-        <TextView
-            android:id="@+id/custo"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="Custo:" />
+            <TextView
+                android:id="@+id/vTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Titulo do filme" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/ano"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:text="Ano:" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/moeda"
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Duration:  " />
+
+            <TextView
+                android:id="@+id/vDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Titulo do filme" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="53dp"
-            android:text="Moeda:" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cost:  " />
+
+            <TextView
+                android:id="@+id/vCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Titulo do filme" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Year:  " />
+
+            <TextView
+                android:id="@+id/vYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Titulo do filme" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currency:  " />
+
+            <TextView
+                android:id="@+id/vCurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Titulo do filme" />
+        </LinearLayout>
+
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

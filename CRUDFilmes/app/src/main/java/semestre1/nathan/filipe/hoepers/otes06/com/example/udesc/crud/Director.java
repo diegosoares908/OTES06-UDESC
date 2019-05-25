@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Director {
 
-    private int id;
+    private String id;
     private String name;
     private String birth;
     private String country;
@@ -18,11 +18,15 @@ public class Director {
         this.movies = movies;
     }
 
-    public int getId() {
+    public Director() {
+
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

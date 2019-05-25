@@ -22,7 +22,9 @@
         <activity
             android:name=".Filmes"
             android:label="@string/title_activity_filmes" />
-        <activity android:name=".FilmeInfo"></activity>
+        <activity android:name=".FilmeInfo" />
+        <activity android:name=".AddMovieActivity" />
+        <activity android:name=".Diretores"></activity>
     </application>
 
 </manifest>
