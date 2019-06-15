@@ -1,4 +1,4 @@
-package semestre1.nathan.filipe.hoepers.otes06.com.example.udesc.crud;
+package trabalhofinal.diego.nathan.otes06.udesc.trabalho_final_android.ui;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.List;
+
+import trabalhofinal.diego.nathan.otes06.udesc.trabalho_final_android.R;
+import trabalhofinal.diego.nathan.otes06.udesc.trabalho_final_android.entities.Movie;
 
 public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.MovieListViewHolder> {
 
